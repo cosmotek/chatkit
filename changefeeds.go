@@ -12,4 +12,6 @@ type FeedEvent struct {
 	AuthorName uuid.UUID
 }
 
-func (e Exchange) ChangeFeed(userID uuid.UUID)
+func (e Exchange) ChangeFeed(userID uuid.UUID) (<-chan FeedEvent, error) {
+	return nil, nil
+}

@@ -1,0 +1,15 @@
+version: "3.2"
+services:
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=psql
+      - POSTGRES_PASSWORD=psql
+      - POSTGRES_DB=psql
+  redis:
+    image: redis:6-alpine
+    command: redis-server --requirepass redis
+    ports:
+     - 6379:6379
